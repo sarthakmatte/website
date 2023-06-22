@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=devide-width, initial-scale=1.0">
+    <title>Sarthak's Digital Portfolio</title>
+    <link rel="stylesheet" href="SarthakStyles.css">
+    <script src="https://kit.fontawesome.com/f22a1839c8.js" crossorigin="anonymous"></script>
+</head>
+<body> 
+    <div id="header">
+        <div class="container">
+            <nav>
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            </nav>
+            <div class="header-text">
+                <p>Front-End Developer</p>
+                <h1>Hi, I'm <span>Sarthak Matte</span><br> From India</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="about-col-1">
+                <img src="F:\Sarthak\Pictures\.thumbnails\3947.jpg" alt="Sarthak Matte">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <h2>Observer and Learner</h2><br>
+                <p>My name is Sarthak Matte.<br>I am a native of Chandrapur, Maharashtra.<br>I'm currently persuing B.Tech in Computer Science at MIT-Academy  of Engineering.<br>
+                I am a keen observer and learn things through observation.<br>
+                My current interests are Coding and Web-Development with HTML, CSS and JavaScript. </p>
+                <br>
+                <div id="tab-titles">
+                    <h2 class="tab-links active-link" onclick="opentab('skills')">Skills</h2>
+                    <h2 class="tab-links" onclick="opentab('experience')">Experience</h2>
+                    <h2 class="tab-links" onclick="opentab('education')">Education</h2>
+
+
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Front-end Development</span><br>User interaction with Web Applications</li>
+                        <li><span>Web Development</span><br>Web App Development</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2022 - Current</span><br>C/C++ & Python</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022 - 2026</span><br>MIT Academy of Engineering, Pune</li>
+                        <li><span>2020 - 2022</span><br>Janata Mahavidyalaya, Chandrapur</li>
+                        <li><span>2007 - 2020</span><br>Mount Carmel Convent High School, Chandrapur</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web-Development</h2>
+                    <p>I can provide you best web development service you are searching for.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-eye"></i>
+                    <h2>App User Interaction</h2>
+                    <p>User using your web application will be satisfied with my services. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+        <embed src="F:\SarthakMatte-PCAP - Programmi-certificate-1.pdf" width="500" height="600" type="application/pdf"><br><br>
+    </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-regular fa-paper-plane"></i>sarthakmatte1221@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>8975080365</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="E-mail" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="button">Submit</button>
+                </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>2023. Copyright @ Sarthak.</p>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("acttive-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
